@@ -1,3 +1,6 @@
+* {
+  margin: 0;
+}
 :root {
   --brand-color: #212121;
   --active-color: #2196f3;
@@ -7,11 +10,20 @@
 body {
   font-family: "Roboto", "sans-serif";
   color: var(--brand-color);
+  width: 1600px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 15px;
 }
 .link {
-  color: #212121;
+  color: var(--brand-color);
   border: none;
   line-height: 1.17;
+  display: flex;
 }
 .button {
   color: var(--brand-color);
@@ -22,6 +34,11 @@ body {
   line-height: 1.39;
   letter-spacing: 0.3px;
   font-size: 16px;
+  padding: 6px 22px 6px 22px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 .link-addres {
   color: #757575;
@@ -32,18 +49,22 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.3px;
+  padding: 9px 954px 0px 15px;
 }
 .link-maps-footer {
   color: #ffffff;
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.03em;
+  padding: 20px 0px 9px 15px;
 }
 .button:hover,
 .button:focus {
   background-color: #2196f3;
   color: #ffffff;
   border: none;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 .link:hover,
@@ -61,6 +82,7 @@ a {
 }
 ul {
   list-style: none;
+  padding-inline-start: 0;
 }
 .logo-first {
   color: var(--active-color);
@@ -75,12 +97,14 @@ ul {
   line-height: 1.17;
 }
 .logo {
+  display: flex;
   word-spacing: -6px;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.03em;
   line-height: 1.17;
+  padding: 24px 0px 25px 15px;
 }
 .description {
   color: var(--description-color);
@@ -105,9 +129,11 @@ ul {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.37;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.06em;
   text-align: center;
   color: #ffffff;
+  flex-wrap: wrap;
+  padding: 200px 452px 30px 452px;
 }
 .button-order {
   font-weight: 700;
@@ -117,10 +143,18 @@ ul {
   color: #ffffff;
   line-height: 1.875;
   background-color: var(--active-color);
+  padding: 10px 41px 10px 42px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.order {
+  padding: 0 700px 200px 700px;
 }
 .title-background {
   background-color: #2f303a;
 }
+
 .definition {
   font-weight: 700;
   font-size: 14px;
@@ -134,6 +168,7 @@ ul {
   text-align: center;
   letter-spacing: 0.3px;
   line-height: 1.17;
+  padding: 0 15px 50px 15px;
 }
 .team {
   background-color: #f5f4fa;
@@ -143,11 +178,15 @@ ul {
   color: var(--brand-color);
   letter-spacing: 0.3px;
   line-height: 1.19;
+  text-align: center;
+  padding: 30px 0 10px;
 }
 .description-team {
   color: var(--description-color);
   letter-spacing: 0.3px;
   line-height: 1.17;
+  text-align: center;
+  padding: 10px 0px 30px;
 }
 footer {
   background-color: #2f303a;
@@ -160,8 +199,102 @@ address {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.6px;
+  padding: 20px 24px 4px;
 }
 .description-project {
   color: var(--description-color);
   line-height: 1.875;
+  padding: 4px 24px 20px;
+}
+
+.header {
+  display: flex;
+  max-width: 1200px;
+  border-bottom: 1px solid #ececec;
+}
+
+.header1 {
+  display: flex;
+  padding: 32px 0px 32px 0px;
+}
+
+.header2 {
+  display: flex;
+  padding: 32px 0px 32px 0px;
+}
+
+.agencja {
+  padding: 0px 46px 0px 93px;
+}
+.portfolio {
+  padding: 0px 46px 0px 0px;
+}
+.kontakt {
+  padding-right: 371px;
+}
+.mail {
+  padding-right: 49px;
+}
+
+.description-list {
+  display: flex;
+  row-gap: 30px;
+  column-gap: 10px;
+  padding: 0 15px;
+}
+.description-list-element {
+  flex-basis: calc((100%-3 * 30px) / 4);
+}
+.section {
+  padding: 94px 0px;
+}
+.what-we-doing {
+  padding: 0 15px;
+  display: flex;
+  gap: 30px;
+}
+.what-we-doing-img {
+  flex-basis: calc((100%-2 * 30px) / 3);
+}
+.our-team-list {
+  display: flex;
+  padding: 0px 15px;
+  gap: 30px;
+}
+
+.team-img {
+  background-color: #ffffff;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 3px 1px rgba(0, 0, 0, 0.12);
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.logo-footer {
+  padding: 60px 1040px 20px 15px;
+}
+.buttons {
+  display: flex;
+  padding: 0 8px 50px;
+  justify-content: center;
+}
+.all {
+  padding-right: 8px;
+}
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.product-img {
+  flex-basis: calc((100%-2 * 30px) / 3);
+  border-bottom: 1px solid #eeeeee;
+}
+
+.adress {
+  display: flex;
+  flex-direction: column;
+}
+
+.tel {
+  padding: 9px 954px 60px 15px;
 }
