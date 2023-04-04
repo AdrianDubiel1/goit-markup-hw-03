@@ -8,10 +8,11 @@ body {
   font-family: "Roboto", "sans-serif";
   color: var(--brand-color);
   width: 1600px;
-  margin: 0;
+  margin: 0 auto;
 }
 * {
   padding: 0;
+  margin: 0;
 }
 .container {
   margin: 0 auto;
@@ -100,13 +101,13 @@ ul {
   font-size: 26px;
   letter-spacing: 0.03em;
   line-height: 1.17;
-  padding: 24px 0px 25px 15px;
 }
 .description {
   color: var(--description-color);
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.3px;
+  padding-bottom: 0;
 }
 .navigation {
   font-weight: 500;
@@ -128,8 +129,8 @@ ul {
   letter-spacing: 0.06em;
   text-align: center;
   color: #ffffff;
-  flex-wrap: wrap;
-  padding: 200px 452px 30px 452px;
+  width: 696px;
+  margin-bottom: 30px;
 }
 .button-order {
   font-weight: 700;
@@ -144,12 +145,13 @@ ul {
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.order {
-  display: flex;
-  padding: 0 700px 200px 700px;
-}
+
 .title-background {
   background-color: #2f303a;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 200px 0;
 }
 
 .definition {
@@ -157,6 +159,7 @@ ul {
   font-size: 14px;
   letter-spacing: 0.3px;
   line-height: 1.17;
+  margin-bottom: 10px;
 }
 .what-we-do,
 .our-team {
@@ -165,6 +168,7 @@ ul {
   text-align: center;
   letter-spacing: 0.3px;
   line-height: 1.17;
+  padding-bottom: 50px;
 }
 .team {
   background-color: #f5f4fa;
@@ -209,19 +213,19 @@ address {
 
 .header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   max-width: 1200px;
+  padding: 25px 0;
+}
+header {
   border-bottom: 1px solid #ececec;
 }
-
 .header1 {
   display: flex;
-  padding: 32px 0px 32px 0px;
 }
 
 .header2 {
   display: flex;
-  padding: 32px 0px 32px 0px;
 }
 
 .agencja {
@@ -237,15 +241,15 @@ address {
   padding-right: 49px;
 }
 
-.description-list {
-  display: flex;
-  column-gap: 30px;
+.section {
+  padding: 94px;
 }
 .description-list-element {
   flex-basis: calc((100%-3 * 30px) / 4);
 }
-.section {
-  padding: 94px 0px;
+.description-list {
+  display: flex;
+  column-gap: 30px;
 }
 .what-we-doing {
   padding: 0 15px;
@@ -298,4 +302,7 @@ img {
 }
 .address {
   padding: 0 0 60px 15px;
+}
+.fix {
+  padding-bottom: 0;
 }
